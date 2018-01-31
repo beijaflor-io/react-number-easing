@@ -4,7 +4,7 @@
   "description": "React component for fancy transition for numbers.",
   "main": "dist/index.js",
   "scripts": {
-    "prepublish": "mkdir -p dist && babel --presets react --plugins transform-object-rest-spread src/index.jsx -u -o dist/index.js --stage 1",
+    "prepublish": "mkdir -p dist && babel src/index.jsx -u -o dist/index.js --stage 1",
     "pages": "git subtree push --prefix gh-pages origin gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +21,8 @@
     "eases": "^1.0.6"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2017": "^6.24.1",
     "babel-cli": "^6.26.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1"
