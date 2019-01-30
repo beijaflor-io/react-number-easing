@@ -1,15 +1,17 @@
 var React = require('react');
+var createClass = require('create-react-class');
+var PropTypes = require('prop-types');
 
 var eases = require('eases');
 
-var NumberEasing = React.createClass({
+var NumberEasing = createClass({
 
     propTypes: {
-        value: React.PropTypes.any.isRequired,
-        speed: React.PropTypes.number,
-        ease: React.PropTypes.oneOf(Object.keys(eases)),
-        useLocaleString: React.PropTypes.bool,
-        delayValue: React.PropTypes.number
+        value: PropTypes.any.isRequired,
+        speed: PropTypes.number,
+        ease: PropTypes.oneOf(Object.keys(eases)),
+        useLocaleString: PropTypes.bool,
+        delayValue: PropTypes.number
     },
 
     timeout: null,

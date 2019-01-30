@@ -5,19 +5,19 @@ var _extends = Object.assign || function (target) { for (var i = 1; i < argument
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
 var React = require('react');
+var createClass = require('create-react-class');
+var PropTypes = require('prop-types');
 
 var eases = require('eases');
 
-var NumberEasing = React.createClass({
-    displayName: 'NumberEasing',
-
+var NumberEasing = createClass({
 
     propTypes: {
-        value: React.PropTypes.any.isRequired,
-        speed: React.PropTypes.number,
-        ease: React.PropTypes.oneOf(Object.keys(eases)),
-        useLocaleString: React.PropTypes.bool,
-        delayValue: React.PropTypes.number
+        value: PropTypes.any.isRequired,
+        speed: PropTypes.number,
+        ease: PropTypes.oneOf(Object.keys(eases)),
+        useLocaleString: PropTypes.bool,
+        delayValue: PropTypes.number
     },
 
     timeout: null,
